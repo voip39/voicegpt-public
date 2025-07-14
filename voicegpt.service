@@ -1,0 +1,12 @@
+[Unit]
+Description=VoiceGPT Backend Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/voicegpt
+ExecStart=/root/voicegpt/venv/bin/python /root/voicegpt/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
